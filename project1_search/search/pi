@@ -1,0 +1,46 @@
+    fringe=util.Stack()
+    fringe.push([[problem.getStartState()],[]])
+    closed_set=set()
+    while fringe:
+        now=fringe.pop()
+     
+        if now[0][-1] not in closed_set:
+            closed_set.add(now[0][-1])
+            expand=now[0]
+            direction=now[1]
+            if problem.isGoalState(expand[-1]):
+                return direction
+        else:
+            continue
+        for i in range(len(problem.getSuccessors(expand[-1]))):
+            fringe.push([expand+[problem.getSuccessors(expand[-1])[i][0]],direction+[problem.getSuccessors(expand[-1])[i][1]]])
+        
+
+
+
+
+
+
+
+
+
+def uniformCostSearch(problem):
+    """Search the node of least total cost first."""
+    "*** YOUR CODE HERE ***"
+    pq=util.PriorityQueue()
+    from game import Directions
+    pq.push([[[problem.getStartState()],[],0]],0)
+    closed_set=[]
+    change={'South':Directions.SOUTH,'West':Directions.WEST,'North':Directions.NORTH,'East':Directions.EAST}
+    while pq:
+        now=pq.pop() 
+        if now[0][0][-1] not in closed_set:
+            expand=now[0][0]
+            direction=now[0][1]
+            if problem.isGoalState(expand[-1]):
+                return direction
+        else:           
+            continue
+        for i in range(len(problem.getSuccessors(expand[-1]))):
+            pq.push([[expand+[problem.getSuccessors(expand[-1])[i][0]],direction+[change[problem.getSuccessors(expand[-1])[i][1]]],now[0][2]+problem.getSuccessors(expand[-1])[i][2]]],now[0][2]+problem.getSuccessors(expand[-1])[i][2])
+        closed_set.append(expand[-1])

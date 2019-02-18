@@ -1,0 +1,89 @@
+% Search for all the places that say "PUT SOMETHING HERE".
+
+\documentclass[11pt]{article}
+\usepackage{amsmath,textcomp,amssymb,geometry,graphicx,enumerate}
+
+\def\Name{Shenao Zhang}  % Your name
+\def\SID{3034487184}  % Your student ID number
+\def\Homework{3} % Number of Homework
+\def\Session{Spring 2019}
+
+
+\title{CS188--Spring 2019 --- Homework \Homework }
+\author{\Name, SID \SID}
+\markboth{CS188--\Session\  Homework \Homework\ \Name}{CS188--\Session\ Homework \Homework\ \Name}
+\pagestyle{myheadings}
+\date{}
+
+\newenvironment{qparts}{\begin{enumerate}[{(}a{)}]}{\end{enumerate}}
+\def\endproofmark{$\Box$}
+\newenvironment{proof}{\par{\bf Proof}:}{\endproofmark\smallskip}
+
+\textheight=12in
+\textwidth=6.5in
+\topmargin=-.75in
+\oddsidemargin=0.25in
+\evensidemargin=0.25in
+
+
+\begin{document}
+\maketitle
+
+\noindent\textbf{Due:} Monday 2/11/2019 at 11:59pm (submit via Gradescope).\\
+Leave self assessment boxes blank for this due date.\\
+\textbf{Self assessment due:} Monday 2/11/2018 at 11:59pm (submit via Gradescope)
+For the self assessment, \textbf{fill in the self assessment boxes in your original submission} (you can
+download a PDF copy of your submission from Gradescope). For each subpart where your original answer
+was correct, write “correct.” Otherwise, write and explain the correct answer.\\
+\textbf{Policy:} Can be solved in groups (acknowledge collaborators) but must be written up individually.\\
+\textbf{Submission:} Your submission should be a PDF that matches this template. Each page of the PDF should
+align with the corresponding page of the template (page 1 has name/collaborators, question 1 begins on page
+2, etc.). \textbf{Do not reorder, split, combine, or add extra pages. }The intention is that you print out the
+template, write on the page in pen/pencil, and then scan or take pictures of the pages to make your submission.
+You may also fill out this template digitally (e.g. using a tablet.)\\
+\\
+\begin{center}
+\begin{tabular}{|c|c|}
+\hline 
+First name&Shenao\\
+\hline 
+Last name&Zhang\\
+\hline 
+SID&3034487184\\
+\hline
+Collaborators&None\\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+\section*{Q1.One Wish Pacman}
+\begin{qparts}
+\item
+From bottom to up, from left to right:(-1,4),(3,4),(0,2),(-3,4),(0,3),(0,4).\\
+ \newpage
+min(ulist)\\
+max(min(vlist),max(ulist))\\
+ \newpage
+\item
+\begin{enumerate}[(i)]
+    \item 
+
+From bottom to up, from left to right:(-1,1.5),(3,3.5),(0,1),(-3,1),(0,1.5),(0,1.5).\\
+\\
+\item
+min(ulist)\\
+max(min(vlist),average(ulist))
+\end{enumerate}
+\newpage
+\item
+We can determin whether the pacman uses its power by comparing the number of the two ghosts.
+
+
+
+\newpage
+
+\end{qparts}
+\section*{Q2.MedianMiniMax}
+$v_7,v_8,v_12,v_14,v_15,v_16$
+
+\end{document}
